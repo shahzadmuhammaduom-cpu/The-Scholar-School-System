@@ -4,10 +4,12 @@
 body { background: linear-gradient(to bottom, #87CEEB 0%, #E0F6FF 100%); color: #222; }
 
 header {
-  background: linear-gradient(rgba(0, 191, 255, 0.85), rgba(30, 144, 255, 0.85)), 
+  background: linear-gradient(rgba(0, 191, 255, 0.80), rgba(30, 144, 255, 0.80)), 
               url('header-bg.jpg') no-repeat center center/cover;
-  color: white; text-align: center; padding: 80px 20px;
+  color: white; text-align: center; padding: 100px 20px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  position: relative;
+}
 }
 }
 header img { width: 160px; height: 160px; background: white; padding: 10px; border-radius: 50%; box-shadow: 0 0 25px rgba(255,255,255,0.6); margin-bottom: 15px; object-fit: cover; }
