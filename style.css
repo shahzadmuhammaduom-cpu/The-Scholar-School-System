@@ -4,11 +4,48 @@
 body { background: linear-gradient(to bottom, #87CEEB 0%, #E0F6FF 100%); color: #222; }
 
 header {
-  background: linear-gradient(rgba(0, 191, 255, 0.80), rgba(30, 144, 255, 0.80)), 
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), 
               url('header-bg.jpg') no-repeat center center/cover;
-  color: white; text-align: center; padding: 100px 20px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  color: white; 
+  text-align: center; 
+  padding: 140px 20px;
+  font-family: 'Times New Roman', Times, serif;
   position: relative;
+}
+
+/* LOGO KO AAGEY LANA */
+header .logo {
+  width: 130px;
+  height: 130px;
+  border: 4px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 25px rgba(255,255,255,0.7);
+  background: white; /* logo ke peeche white circle */
+  padding: 5px;
+  position: relative;
+  z-index: 2;
+}
+
+/* TEXT KO WHITE + BARA KARNA */
+header h1 {
+  color: white;
+  font-size: 3.2em;
+  font-weight: bold;
+  margin: 20px 0 10px 0;
+  text-shadow: 3px 3px 12px rgba(0,0,0,0.9); /* taake photo par clear dikhe */
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 2;
+}
+
+header p {
+  color: white;
+  font-size: 1.5em;
+  font-style: italic;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
+  position: relative;
+  z-index: 2;
+}
 }
 }
 }
