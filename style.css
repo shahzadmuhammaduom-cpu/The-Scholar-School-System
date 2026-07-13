@@ -13,17 +13,34 @@ header {
 }
 }
 
-/* LOGO KO AAGEY LANA */
-header .logo {
-  width: 130px;
-  height: 130px;
-  border: 4px solid white;
-  border-radius: 50%;
-  box-shadow: 0 0 25px rgba(255,255,255,0.7);
-  background: white; /* logo ke peeche white circle */
-  padding: 5px;
-  position: relative;
-  z-index: 2;
+/* LOGO ANIMATION - BARA + CIRCLE + GHOMNA */
+.logo-animated {
+  width: 200px; /* Bara size */
+  height: 200px;
+  border-radius: 50%; /* Perfect Circle */
+  background: white;
+  padding: 10px; /* White border */
+  margin-bottom: 25px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.6); /* Glow */
+  
+  /* Animation */
+  animation: logoSpin 8s linear infinite;
+}
+
+/* LOGO GHOMNE KI ANIMATION */
+@keyframes logoSpin {
+  0% { transform: rotate(0deg) scale(1); }
+ 50% { transform: rotate(180deg) scale(1.05); } /* Halka bara */
+ 100% { transform: rotate(360deg) scale(1); }
+}
+
+/* Mobile ke liye */
+@media (max-width: 768px) {
+  .logo-animated {
+    width: 140px;
+    height: 140px;
+  }
+}
 }
 
 /* TEXT KO WHITE + BARA KARNA */
@@ -39,11 +56,25 @@ header h1 {
 }
 
 header {
-  background: linear-gradient(-45deg, #1e3a8a, #2563eb, #0ea5e9, #38bdf8);
-  background-size: 400% 400%;
+  /* 1. Gradient + Logo Background */
+  background: 
+    linear-gradient(rgba(37, 99, 235, 0.85), rgba(14, 165, 233, 0.85)),
+    url('logo.png') center / 300px no-repeat;
+  
+  background-size: 400% 400%, 300px; /* pehla gradient ke liye, dusra logo ke liye */
   animation: skyChange 10s ease infinite;
-  padding: 60px 20px;
+  
+  padding: 100px 20px;
   text-align: center;
+  position: relative;
+}
+
+/* SKY ANIMATION */
+@keyframes skyChange {
+ 0% { background-position: 0% 50%, center; }
+ 50% { background-position: 100% 50%, center; }
+ 100% { background-position: 0% 50%, center center; }
+}
 }
 
 @keyframes skyChange {
